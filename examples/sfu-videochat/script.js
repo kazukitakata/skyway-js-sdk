@@ -27,7 +27,7 @@ $(function() {
     if (!roomName) {
       return;
     }
-    room = peer.joinRoom('sfu_video_' + roomName, {mode: 'sfu', stream: localStream});
+    room = peer.joinRoom('sfu_video_' + roomName, {mode: 'mesh', stream: localStream});
 
     $('#room-id').text(roomName);
     step3(room);
@@ -112,7 +112,6 @@ $(function() {
   }
 
   function step2() {
-    $('#their-videos').empty();
     $('#step1, #step3').hide();
     $('#step2').show();
     $('#join-room').focus();
