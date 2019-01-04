@@ -193,4 +193,10 @@ $(function() {
   if(typeof window.orientation != "undefined" || (document.uniqueID && document.documentMode < 11)){
     btn.style.display = "none";
   }
+ 
+  function keydown() {
+    if (event.shiftKey == true) {
+        requestFullscreen();
+      }
+  }
 });
