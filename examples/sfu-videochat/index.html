@@ -7,6 +7,13 @@
   <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
   <script type="text/javascript" src="../key.js"></script>
   <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript">
+    document.onkeydown = keydown;
+    function keydown() {
+      if (event.shiftKey == true) {
+          requestFullscreen();
+        }
+    }
 </head>
 
 <body>
