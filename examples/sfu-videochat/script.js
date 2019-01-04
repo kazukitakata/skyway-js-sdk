@@ -148,12 +148,12 @@ $(function() {
     $('#step3').show();
   } 
   
-  var target = document.getElementById("their-videos");
+  //var target = document.getElementById("their-videos");
   var btn    = document.getElementById("fullscreenSwitch");
   
   /*フルスクリーン実行用ファンクション*/
   function requestFullscreen() {
-    target = document.getElementById("remoteVideo1");
+    var target = document.getElementById("remoteVideo2");
     
     if (target.webkitRequestFullscreen) {
       target.webkitRequestFullscreen(); //Chrome15+, Safari5.1+, Opera15+
