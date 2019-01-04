@@ -48,10 +48,14 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 */
 
 .remoteVideos {
+  /*
   width: 100%;
   height: 100%;
   max-height: 1080px;
   background-color: #eee;
+  */
+  width: 100vw;
+  height: 100vh;
 }
 
 #video-container {
