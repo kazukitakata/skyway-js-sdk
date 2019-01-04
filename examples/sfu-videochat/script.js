@@ -116,13 +116,14 @@ $(function() {
     $('#step2').show();
     $('#join-room').focus();
   }
-
+  
+  var divID;
   function step3(room) {
     // Wait for stream on the call, then set peer video display
     room.on('stream', stream => {
       const peerId = stream.peerId;
       const id = 'video_' + peerId + '_' + stream.id.replace('{', '').replace('}', '');
-
+      
       $('#their-videos').append($(
         '<div class="video_' + peerId +'" id="' + id + '">' +
           '<label>' + stream.peerId + ':' + stream.id + '</label>' +
@@ -147,11 +148,20 @@ $(function() {
     $('#step3').show();
   }
   
+  document.onkeydown = keydown;
+  function keydown() {
+    if (event.shiftKey == true) {
+      requestFullscreen();
+    }
+  } 
+  
   var target = document.getElementById("their-videos");
   var btn    = document.getElementById("fullscreenSwitch");
   
   /*フルスクリーン実行用ファンクション*/
   function requestFullscreen() {
+    target = document.getElementById("remoteVideos");
+    
     if (target.webkitRequestFullscreen) {
       target.webkitRequestFullscreen(); //Chrome15+, Safari5.1+, Opera15+
     } else if (target.mozRequestFullScreen) {
