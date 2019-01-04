@@ -160,7 +160,7 @@ $(function() {
   
   /*フルスクリーン実行用ファンクション*/
   function requestFullscreen() {
-    target = document.getElementById("remoteVideos");
+    //target = document.getElementById("remoteVideos");
     
     if (target.webkitRequestFullscreen) {
       target.webkitRequestFullscreen(); //Chrome15+, Safari5.1+, Opera15+
