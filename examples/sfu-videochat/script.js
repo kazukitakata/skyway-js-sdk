@@ -153,7 +153,7 @@ $(function() {
   
   /*フルスクリーン実行用ファンクション*/
   function requestFullscreen() {
-    var target = document.getElementById("remoteVideo2");
+    var target = document.getElementById("remoteVideo3");
     
     if (target.webkitRequestFullscreen) {
       target.webkitRequestFullscreen(); //Chrome15+, Safari5.1+, Opera15+
