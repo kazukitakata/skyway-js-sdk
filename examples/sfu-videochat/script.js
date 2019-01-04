@@ -146,13 +146,6 @@ $(function() {
     });
     $('#step1, #step2').hide();
     $('#step3').show();
-  }
-  
-  document.onkeydown = keydown;
-  function keydown() {
-    if (event.shiftKey == true) {
-      requestFullscreen();
-    }
   } 
   
   var target = document.getElementById("their-videos");
