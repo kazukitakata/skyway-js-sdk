@@ -125,9 +125,9 @@ $(function() {
       const id = 'video_' + peerId + '_' + stream.id.replace('{', '').replace('}', '');
       
       $('#their-videos').append($(
-        '<div class="video_' + peerId +'" id="' + id + '">' +
-          '<label>' + stream.peerId + ':' + stream.id + '</label>' +
-          '<video class="remoteVideos" autoplay playsinline>' +
+        '<div id="remoteVideo1" class="video_' + peerId +'" id="' + id + '">' +
+          '<label id="remoteVideo2">' + stream.peerId + ':' + stream.id + '</label>' +
+          '<video id="remoteVideo3" class="remoteVideos" autoplay playsinline>' +
         '</div>'));
       const el = $('#' + id).find('video').get(0);
       el.srcObject = stream;
@@ -153,7 +153,7 @@ $(function() {
   
   /*フルスクリーン実行用ファンクション*/
   function requestFullscreen() {
-    //target = document.getElementById("remoteVideos");
+    target = document.getElementById("remoteVideo1");
     
     if (target.webkitRequestFullscreen) {
       target.webkitRequestFullscreen(); //Chrome15+, Safari5.1+, Opera15+
